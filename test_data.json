@@ -1,0 +1,36 @@
+{
+  "summary": "Users report severe technical issues with the app, including data fetching failures and compatibility problems, alongside poor customer service and billing disputes. There are widespread frustrations with membership cancellation processes, privacy concerns, and perceived scams.",
+  "pain_points": [
+    {
+      "issue": "App Technical Failures",
+      "frequency": "High",
+      "example_quote": "Something went wrong with the app post cloud migration, It's not fetching the data... even doesn't show the images of workouts..."
+    },
+    {
+      "issue": "Membership Cancellation Difficulties",
+      "frequency": "High",
+      "example_quote": "I've been trying to cancel my membership... They just don't want to cancel it. This is like a cult."
+    },
+    {
+      "issue": "Billing and Payment Issues",
+      "frequency": "High",
+      "example_quote": "I have never not payed my bill... 3 late fees! This never happened before why now?"
+    },
+    {
+      "issue": "Privacy Concerns",
+      "frequency": "Medium",
+      "example_quote": "Suddenly on my third visit they tell me I can't use PF gyms without agreeing to install their privacy-invasive app that monetizes user data..."
+    },
+    {
+      "issue": "Poor Customer Support",
+      "frequency": "High",
+      "example_quote": "You can e mail, but absolutely no human to speak to."
+    }
+  ],
+  "actions": [
+    "Revise app compatibility to support older devices like the Samsung Note 8",
+    "Implement a streamlined, remote membership cancellation process",
+    "Enhance transparency in billing practices and provide clear auto-payment opt-out options"
+  ],
+  "details": "The reviews highlight recurring technical glitches in the app, such as data retrieval failures, compatibility issues, and frozen login screens, which hinder user experience. Customers express frustration with opaque billing systems, aggressive late fees, and an inability to cancel memberships without in-person visits. Privacy concerns arise from the app's data collection practices, while customer service is criticized for being unresponsive and unhelpful. These issues collectively paint a picture of a company prioritizing profit over user satisfaction, leading to a loss of trust and potential legal risks."
+}

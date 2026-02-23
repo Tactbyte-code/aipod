@@ -1,13 +1,13 @@
 FROM python:3.11.1-slim
 
-WORKDIR /
+WORKDIR /app
 
-# Copy and install requirements
+# install dependencies
 COPY builder/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy your handler code
-# COPY src/handler.py .
+# copy ALL source files (important)
+COPY src/ /app/
 
-# Command to run when the container starts
-CMD ["python", "-u", "/handler.py"]
+# start runpod worker
+CMD ["python", "-u", "handler.py"]

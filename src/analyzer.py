@@ -66,12 +66,34 @@ def review_analyzer(CSV_FILE):
     # ==========================================
     # 2. PROMPT
     # ==========================================
-    prompt = f"""You are an API that analyzes app reviews. /no_think
-Return ONLY valid JSON.
+    prompt = f"""
+    You are an API that analyzes app reviews. 
+    Analyze the following text and return ONLY a JSON object. 
+    Do not include markdown formatting.
 
-TEXT:
-{combined_text}
-"""
+    TEXT TO ANALYZE:
+    '''
+    {combined_text}
+    '''
+
+    REQUIRED JSON STRUCTURE:
+    {{
+    "summary": "A 2-sentence executive summary of the reviews.",
+    "pain_points": [
+        {{
+        "issue": "Short title of the problem",
+        "frequency": "High/Medium/Low",
+        "example_quote": "A direct quote from the text"
+        }}
+    ],
+    "actions": [
+        "Specific action step 1",
+        "Specific action step 2",
+        "Specific action step 3"
+    ],
+    "details": "A deeper paragraph explaining the context of the pain points and user sentiment."
+    }}
+    """
 
     # ==========================================
     # 3. LOAD MODEL (FIXED)

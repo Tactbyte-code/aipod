@@ -26,7 +26,21 @@ def handler(job):
     filter_negative_reviews(csv_path, OUTPUT_PATH)
 
     result = review_analyzer(OUTPUT_PATH)
-    return result
+
+    # Define the CORS headers
+    cors_headers = {
+        'Access-Control-Allow-Origin': '*',  # Allows all origins
+        'Access-Control-Allow-Methods': 'POST, OPTIONS', # Specifies allowed methods
+        'Access-Control-Allow-Headers': 'Content-Type, Authorization', # Specifies allowed headers
+    }
+
+    # Return the result as a dictionary, which RunPod converts to a JSON response
+    # The 'headers' key adds the CORS headers to the HTTP response
+    return {
+        'statusCode': 200,
+        'body': result,
+        'headers': cors_headers
+    }
 
 
 runpod.serverless.start({"handler": handler})  # Required
